@@ -6,10 +6,10 @@
 # Written by: TheTechromancer
 #
 
-FROM python:3
+FROM python:3-bullseye
 
 # Install tools/dependencies from apt
-RUN apt-get -y update && apt-get -y install nbtscan onesixtyone nmap
+RUN apt-get -y update && apt-get -y install nbtscan onesixtyone nmap npm
 
 # Compile other tools from source
 RUN mkdir /tools || true
